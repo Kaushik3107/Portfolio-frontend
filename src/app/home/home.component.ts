@@ -41,17 +41,22 @@ export class HomeComponent {
   constructor(private http: HttpClient) {}
 
   onSubmit() {
-    this.http.post('http://localhost:5000/api/contact', this.contact).subscribe(
-      (response) => {
-        console.log('Contact information sent successfully', response);
-        alert('Your message has been sent!');
-        this.contact = { name: '', email: '', message: '' }; // Reset form
-      },
-      (error) => {
-        console.error('There was an error!', error);
-        alert('There was an error sending your message.');
-      }
-    );
+    this.http
+      .post(
+        'https://portfolio-backend-delta-rust.vercel.app/api/contact',
+        this.contact
+      )
+      .subscribe(
+        (response) => {
+          console.log('Contact information sent successfully', response);
+          alert('Your message has been sent!');
+          this.contact = { name: '', email: '', message: '' }; // Reset form
+        },
+        (error) => {
+          console.error('There was an error!', error);
+          alert('There was an error sending your message.');
+        }
+      );
   }
 
   toggleSkillState() {
