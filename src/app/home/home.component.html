@@ -1,0 +1,246 @@
+<section id="home" class="home-section">
+  <div class="home-content">
+    <h1>
+      Hi, <br />
+      I'm <span class="highlight">Kaushik Dange</span><br />FullStack Developer
+    </h1>
+    <button
+      mat-raised-button
+      color="warn"
+      class="contact-button"
+      (click)="scrollToSection('contact')"
+    >
+      Contact
+    </button>
+    <div class="social-icons">
+      <a
+        href="https://www.linkedin.com/in/kaushik-dange?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BGYHvKKn8SaisQN3yu630jA%3D%3D"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <a href="https://github.com/Kaushik3107"><i class="fab fa-github"></i></a>
+      <!-- <a href="#"><i class="fab fa-behance"></i></a> -->
+    </div>
+  </div>
+  <div class="home-image">
+    <img src="assets/frontend-image.jpeg" alt="Frontend Developer" />
+  </div>
+</section>
+
+<section id="skills">
+  <h1>Skills</h1>
+  <div class="skills-grid">
+    <div
+      class="skill-card"
+      [@hoverEffect]="skillState"
+      (mouseover)="toggleSkillState()"
+      (mouseleave)="toggleSkillState()"
+    >
+      <h3>HTML & CSS</h3>
+      <p>Advanced</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>JavaScript</h3>
+      <p>Advanced</p>
+    </div>
+    <div class="skill-card">
+      <h3>Angular</h3>
+      <p>Advanced</p>
+    </div>
+    <div class="skill-card">
+      <h3>TypeScript</h3>
+      <p>Advanced</p>
+    </div>
+    <div class="skill-card">
+      <h3>Node.js</h3>
+      <p>Advanced</p>
+    </div>
+    <div class="skill-card">
+      <h3>MongoDB</h3>
+      <p>Advanced</p>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="education-card">
+    <h1>Education</h1>
+    <div class="skill-card">
+      <h3>10th SSC</h3>
+      <p>School:Shree Siddheshwar English Medium High School</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Diploma In Computer Technology</h3>
+      <p>College: S.E.S.Polytechnic Solapur</p>
+    </div>
+    <div class="skill-card">
+      <h3>B.E In Information Technology</h3>
+      <p>College:Bharti Vidhyapeet's College Of Engineering</p>
+    </div>
+  </div>
+</section>
+<section class="work-section" id="work">
+  <h1>Project Worked</h1>
+  <br />
+  <div class="team-card">
+    <h3>
+      <a
+        href="https://shopping-cart-api-fetch-and-display.vercel.app/"
+        target="_blank"
+        >Shopping Cart Project</a
+      >
+    </h3>
+    <br />
+    <h4>Tech stacks: HTML & CSS, Javascript, node.js, Express.js, Angular</h4>
+    <br />
+    <p>
+      This is project is a Shopping cart where all products are displayed here
+      we can search the products by categery buttons
+    </p>
+  </div>
+
+  <div class="team-card">
+    <h3>
+      <a href="https://mobile-otp-verfication-zeta.vercel.app/" target="_blank"
+        >Mobile OTP Verification</a
+      >
+    </h3>
+    <br />
+    <h4>Tech stacks: HTML & CSS, Javascript, node.js, Express.js, Angular</h4>
+    <br />
+    <p>
+      This Project is used for mobile number verfication. Here user required to
+      enter his mobile number and OTP is sent on the same number, once OTP is
+      entered it will verify is otp is valid
+    </p>
+  </div>
+
+  <div class="team-card">
+    <h3>
+      <a href="https://otp-verification-with-form.vercel.app/" target="_blank"
+        >Registration Form with Email Verification</a
+      >
+    </h3>
+    <br />
+    <h4>
+      Tech stacks: HTML & CSS, Javascript, node.js, Express.js, Angular,NodeJs
+    </h4>
+    <br />
+    <p>
+      This project is based on user Registration process, here the user details
+      are entered and valid based on validation applyed on it and also email
+      verfication is implemented once all creditendials are valid user will be
+      able to complete the registration Successfully
+    </p>
+  </div>
+
+  <div class="team-card">
+    <h3>
+      <a href="https://meeting-room-booking-omega.vercel.app/" target="_blank"
+        >Meeting Room Booking</a
+      >
+    </h3>
+    <br />
+    <h4>
+      Tech stacks: HTML & CSS, Javascript, node.js, Express.js, Angular, nodeJs
+    </h4>
+    <br />
+    <p>
+      With Project is used to book a room for meeting, There are multiple room
+      available from that we can book available rooms. Also the booked rooms are
+      displayed with its capacity and time and date on which it is booked
+    </p>
+  </div>
+</section>
+
+<!-- <section id="contact">
+  <h2>Contact Us</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input
+        type="text"
+        [(ngModel)]="contact.name"
+        placeholder="Your Name"
+        name="name"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="email"
+        [(ngModel)]="contact.email"
+        placeholder="Your Email"
+        name="email"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <textarea
+        [(ngModel)]="contact.message"
+        placeholder="Your Message"
+        name="message"
+        required
+      ></textarea>
+    </div>
+    <button type="submit" mat-raised-button color="primary">
+      Send Message
+    </button>
+  </form>
+</section> -->
+
+<section class="contact-section" id="contact">
+  <h2 class="contact-title">CONTACT <span class="highlight">AWESOME</span></h2>
+
+  <div class="contact-container">
+    <div class="contact-form">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">NAME</label>
+          <input
+            type="text"
+            [(ngModel)]="contact.name"
+            placeholder="Your Name"
+            name="name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">EMAIL</label>
+          <input
+            type="email"
+            [(ngModel)]="contact.email"
+            placeholder="Your Email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">MESSAGE</label>
+          <textarea
+            [(ngModel)]="contact.message"
+            placeholder="Your Message"
+            name="message"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <h3 class="contact-info-title">Contact Info</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p><i class="fas fa-phone"></i>+91 8600882682</p>
+      <p><i class="fas fa-envelope"></i> kaushikdange</p>
+      <p><i class="fas fa-map-marker-alt"></i> Solapur, Maharashtra</p>
+
+      <div class="social-media">
+        <h4>WE ARE SOCIAL</h4>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
